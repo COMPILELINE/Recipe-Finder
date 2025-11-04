@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="app/components/searchBar/search-bar.css">
+
+<form class="search-form" ng-submit="$ctrl.submitSearch()">
+    <input
+        type="text"
+        class="search-input"
+        placeholder="Search for recipes by name (e.g., 'carbonara')"
+        ng-model="$ctrl.query">
+    <button type="submit" class="search-button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+</form>

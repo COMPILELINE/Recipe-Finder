@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="app/components/recipeList/recipe-list.css">
+
+<div class="recipe-list-container">
+    <div ng-if="!$ctrl.recipes">
+        <p>Loading recipes...</p>
+    </div>
+
+    <div ng-if="$ctrl.recipes.length > 0" class="recipe-grid">
+        <recipe-card
+            ng-repeat="recipe in $ctrl.recipes"
+            recipe="recipe">
+        </recipe-card>
+    </div>
+
+    <div ng-if="$ctrl.recipes && $ctrl.recipes.length === 0" class="no-results">
+        <p>No recipes found. Try a different search term!</p>
+    </div>
+</div>

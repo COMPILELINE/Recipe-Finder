@@ -1,0 +1,24 @@
+<div class="results-view">
+    <search-bar
+        initial-query="vm.query"
+        on-search="vm.handleSearch(query)">
+    </search-bar>
+
+    <div class="results-header" ng-if="!vm.isLoading && !vm.isError">
+        <h2>Results for "{{vm.query}}"</h2>
+    </div>
+
+    <div ng-if="vm.isLoading" class="loading-spinner">
+        <i class="fa-solid fa-spinner fa-spin"></i> Loading recipes...
+    </div>
+
+    <div ng-if="vm.isError" class="error-message">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <p>Oops! Something went wrong.</p>
+        <p>{{vm.errorMessage}}</p>
+    </div>
+
+    <div ng-if="!vm.isLoading && !vm.isError">
+        <recipe-list recipes="vm.recipes"></recipe-list>
+    </div>
+</div>

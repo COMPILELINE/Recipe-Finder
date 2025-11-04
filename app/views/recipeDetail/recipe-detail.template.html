@@ -1,0 +1,66 @@
+<div class="recipe-detail-view">
+
+    <div ng-if="vm.isLoading" class="loading-spinner">
+        <i class="fa-solid fa-spinner fa-spin"></i> Loading recipe...
+    </div>
+
+    <div ng-if="vm.isError" class="error-message">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <p>Oops! Could not find that recipe.</p>
+        <p>{{vm.errorMessage}}</p>
+        <a href="#!/" class="btn btn-primary">Back to Search</a>
+    </div>
+
+    <div ng-if="!vm.isLoading && !vm.isError && vm.recipe">
+
+        <a href="" ng-click="vm.goBack()" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Back
+        </a>
+
+        <article class="recipe-detail-card">
+            <img ng-src="{{vm.recipe.strMealThumb}}" alt="{{vm.recipe.strMeal}}" class="recipe-detail-img">
+            
+            <div class="recipe-detail-header">
+                <h1>{{vm.recipe.strMeal}}</h1>
+                <button
+                    class="btn-favorite"
+                    ng-click="vm.toggleFavorite()"
+                    ng-class="{'is-favorite': vm.isFavorite}"
+                    title="{{vm.isFavorite ? 'Remove from favorites' : 'Add to favorites'}}">
+                    <i class="fa-regular fa-heart"></i> <i class="fa-solid fa-heart"></i>    </button>
+            </div>
+
+            <div class="recipe-detail-body">
+                <h3>Ingredients</h3>
+                <ul class="recipe-ingredients-list">
+                    <li ng-repeat="item in vm.recipe.ingredients">
+                        <strong>{{item.ingredient}}</strong> - {{item.measure}}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="recipe-detail-body">
+                <h3>Instructions</h3>
+                <p class="recipe-instructions">{{vm.recipe.strInstructions}}</p>
+            </div>
+
+            <div class="recipe-actions">
+                 <a
+                    ng-if="vm.recipe.strYoutube"
+                    ng-href="{{vm.recipe.strYoutube}}"
+                    target="_blank"
+                    class="btn btn-primary">
+                    Watch Video
+                </a>
+                <a
+                    ng-if="vm.recipe.strSource"
+                    ng-href="{{vm.recipe.strSource}}"
+                    target="_blank"
+                    class="btn btn-secondary">
+                    View Source
+                </a>
+            </div>
+
+        </article>
+    </div>
+</div>

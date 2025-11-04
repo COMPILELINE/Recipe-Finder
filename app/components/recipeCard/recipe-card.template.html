@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="app/components/recipeCard/recipe-card.css">
+
+<a ng-href="{{$ctrl.detailLink}}" class="recipe-card">
+    <div class="recipe-card-image">
+        <img ng-src="{{$ctrl.recipe.strMealThumb}}" alt="{{$ctrl.recipe.strMeal}}">
+    </div>
+    <div class="recipe-card-content">
+        <h3 class="recipe-card-title">{{$ctrl.recipe.strMeal}}</h3>
+    </div>
+</a>

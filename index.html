@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="recipeApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="app/app.css">
+</head>
+<body>
+
+    <nav-bar></nav-bar>
+
+    <main class="container">
+        <div ng-view></div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 <a href="https://www.themealdb.com" target="_blank">compileline</a></p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/app.config.js"></script>
+
+    <script src="app/core/api.service.js"></script>
+    <script src="app/core/storage.service.js"></script>
+
+    <script src="app/components/navBar/nav-bar.component.js"></script>
+    <script src="app/components/searchBar/search-bar.component.js"></script>
+    <script src="app/components/recipeList/recipe-list.component.js"></script>
+    <script src="app/components/recipeCard/recipe-card.component.js"></script>
+
+    <script src="app/views/home/home.controller.js"></script>
+    <script src="app/views/searchResults/search-results.controller.js"></script>
+    <script src="app/views/recipeDetail/recipe-detail.controller.js"></script>
+    <script src="app/views/favorites/favorites.controller.js"></script>
+
+</body>
+</html>

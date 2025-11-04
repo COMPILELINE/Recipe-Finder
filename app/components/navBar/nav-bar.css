@@ -1,0 +1,50 @@
+/* app/components/navBar/nav-bar.css */
+
+.navbar {
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.navbar-brand a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.navbar-links a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.2s ease;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active { /* Note: 'active' class requires $location logic not built in here */
+    color: var(--primary-color);
+}

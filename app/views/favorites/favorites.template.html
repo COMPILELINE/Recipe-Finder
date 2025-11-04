@@ -1,0 +1,13 @@
+<div class="favorites-view">
+    <div class="text-center">
+        <h1>Your Favorite Recipes</h1>
+    </div>
+
+    <recipe-list recipes="vm.favorites" ng-if="vm.favorites.length > 0"></recipe-list>
+
+    <div ng-if="vm.favorites.length === 0" class="text-center">
+        <p>You haven't saved any favorites yet.</p>
+        <a href="#!/" class="btn btn-primary">Find Recipes</a>
+    </div>
+
+</div>
