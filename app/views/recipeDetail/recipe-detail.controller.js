@@ -1,5 +1,3 @@
-// app/views/recipeDetail/recipe-detail.controller.js
-
 'use strict';
 
 angular.
@@ -8,19 +6,16 @@ controller('RecipeDetailController', ['$routeParams', 'recipeApiService', 'favor
     function RecipeDetailController($routeParams, recipeApiService, favoritesService, $window) {
         var vm = this;
 
-        // State flags
         vm.isLoading = true;
         vm.isError = false;
         vm.recipe = null;
         vm.isFavorite = false;
-        var recipeId = $routeParams.id; // Get recipe ID from URL
+        var recipeId = $routeParams.id;
 
-        // Go back to the previous page
         vm.goBack = function() {
             $window.history.back();
         };
 
-        // Toggle the favorite status
         vm.toggleFavorite = function() {
             if (vm.isFavorite) {
                 favoritesService.removeFavorite(vm.recipe.idMeal);
@@ -30,7 +25,6 @@ controller('RecipeDetailController', ['$routeParams', 'recipeApiService', 'favor
             vm.isFavorite = !vm.isFavorite;
         };
 
-        // Fetch the recipe details
         function loadRecipe() {
             vm.isLoading = true;
             vm.isError = false;
@@ -49,7 +43,6 @@ controller('RecipeDetailController', ['$routeParams', 'recipeApiService', 'favor
                 });
         }
 
-        // Initial load
         loadRecipe();
     }
 ]);

@@ -1,5 +1,3 @@
-// app/components/navBar/nav-bar.component.js
-
 'use strict';
 
 angular.

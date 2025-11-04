@@ -1,5 +1,3 @@
-// app/app.config.js
-
 'use strict';
 
 angular.

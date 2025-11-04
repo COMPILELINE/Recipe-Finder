@@ -1,5 +1,3 @@
-/* app/components/navBar/nav-bar.css */
-
 .navbar {
     width: 100%;
     background-color: var(--white);
@@ -45,6 +43,6 @@
 }
 
 .navbar-links a:hover,
-.navbar-links a.active { /* Note: 'active' class requires $location logic not built in here */
+.navbar-links a.active {
     color: var(--primary-color);
 }

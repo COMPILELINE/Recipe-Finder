@@ -1,5 +1,3 @@
-// app/views/searchResults/search-results.controller.js
-
 'use strict';
 
 angular.
@@ -8,19 +6,15 @@ controller('SearchResultsController', ['$routeParams', '$location', 'recipeApiSe
     function SearchResultsController($routeParams, $location, recipeApiService) {
         var vm = this;
 
-        // State flags
         vm.isLoading = true;
         vm.isError = false;
         vm.recipes = [];
-        vm.query = $routeParams.query; // Get the query from the URL
+        vm.query = $routeParams.query;
 
-        // Function passed to the search-bar
         vm.handleSearch = function(query) {
-            // Re-route to a new search URL
             $location.path('/search/' + query);
         };
 
-        // Fetch recipes when the controller loads
         function search() {
             if (!vm.query) {
                 vm.isLoading = false;
@@ -43,7 +37,6 @@ controller('SearchResultsController', ['$routeParams', '$location', 'recipeApiSe
                 });
         }
 
-        // Initial search
         search();
     }
 ]);

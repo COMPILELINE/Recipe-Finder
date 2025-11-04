@@ -1,8 +1,5 @@
-/* app/app.css */
-
-/* --- Global Setup & Variables --- */
 :root {
-    --primary-color: #ff6347; /* Tomato */
+    --primary-color: #ff6347;
     --primary-dark: #e04a30;
     --white: #ffffff;
     --light-gray: #f4f4f4;
@@ -16,7 +13,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
-    padding-top: 60px; /* Height of the nav bar */
+    padding-top: 60px;
     background-color: var(--light-gray);
     color: var(--dark-gray);
     display: flex;
@@ -28,13 +25,12 @@ body {
     box-sizing: border-box;
 }
 
-/* --- Utility Classes --- */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
-    flex-grow: 1; /* Pushes footer down */
+    flex-grow: 1;
 }
 
 .text-center {
@@ -53,10 +49,6 @@ body {
     color: #d9534f;
 }
 
-/* --- Header / Nav Bar --- */
-/* (Styles are in nav-bar.component.css) */
-
-/* --- Footer --- */
 .footer {
     width: 100%;
     text-align: center;
@@ -75,7 +67,6 @@ body {
     text-decoration: underline;
 }
 
-/* --- Basic Button Style --- */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -106,10 +97,6 @@ body {
     background-color: var(--light-gray);
 }
 
-
-/* --- Views --- */
-
-/* Home View */
 .home-view {
     display: flex;
     flex-direction: column;
@@ -132,7 +119,7 @@ body {
     max-width: 600px;
 }
 
-/* Search Results View */
+
 .results-header {
     margin-bottom: 20px;
 }
@@ -140,7 +127,6 @@ body {
     color: var(--black);
 }
 
-/* Recipe Detail View */
 .recipe-detail-card {
     background-color: var(--white);
     border-radius: var(--border-radius);
@@ -194,7 +180,7 @@ body {
 .recipe-instructions {
     font-size: 1.1rem;
     line-height: 1.7;
-    white-space: pre-wrap; /* Preserves line breaks from API */
+    white-space: pre-wrap;
 }
 .recipe-actions {
     padding: 25px;
@@ -219,7 +205,6 @@ body {
     text-decoration: underline;
 }
 
-/* Favorite Button */
 .btn-favorite {
     font-size: 1.5rem;
     background: none;
@@ -249,8 +234,6 @@ body {
     display: none;
 }
 
-
-/* --- Responsive --- */
 @media (min-width: 600px) {
     .recipe-ingredients-list {
         grid-template-columns: 1fr 1fr;
